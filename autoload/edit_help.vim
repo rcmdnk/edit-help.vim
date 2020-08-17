@@ -11,11 +11,15 @@ function! edit_help#edit_help()
   let w:save_shiftwidth = &shiftwidth
   let w:save_softtabstop = &softtabstop
   let w:save_textwidth = &textwidth
+
   setlocal list noexpandtab modifiable noreadonly
-  setlocal tabstop=8 shiftwidth=8 softtabstop=8 textwidth=78
+  let &l:tabstop = g:edit_help_tabwidth
+  let &l:shiftwidth = g:edit_help_tabwidth
+  let &l:softtabstop = g:edit_help_tabwidth
+  let &l:textwidth = g:edit_help_textwidth
   if exists('+colorcolumn')
     let w:save_colorcolumn = &colorcolumn
-    setlocal colorcolumn=78
+    let &l:colorcolumn = g:edit_help_textwidth
   endif
   if has('conceal')
     let w:save_conceallevel = &conceallevel
@@ -71,9 +75,9 @@ endfunction
 
 function! edit_help#edit_help_toggle()
   if !exists('w:edit_help') || !w:edit_help
-    edit_help#no_edit_help()
+    call edit_help#edit_help()
   else
-    edit_help#edit_help()
+    call edit_help#no_edit_help()
   endif
 endfunction
 
