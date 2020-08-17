@@ -1,0 +1,42 @@
+*edit-help.txt*	Plugin to support edditting help file of plugins
+
+Author : rcmdnk <rcmdnk@gmail.com>
+License: Apache 2.0
+
+==============================================================================
+CONTENTS					*edit-help-contents*
+
+INTRODUCTION			|edit-help-introduction|
+COMMAND				|edit-help-command|
+VARIABLES			|edit-help-variables|
+
+==============================================================================
+INTRODUCTION					*edit-help-introduction*
+
+*edit-help* is a Vim plugin to support edditting help file of plugins.
+
+Help type files are opend as readonly and nomodifiable.
+In addition, some special characters are concealed.
+
+It is not useful when you are writing help for plugins.
+
+This plugin gives command to change the enviroment for files of help type
+to be easy to edit.
+
+==============================================================================
+COMMAND						*edit-help-command*
+
+
+					*:EditHelp*
+:EditHelp	Change the editor environment to be easy to edit help type
+		files.
+
+:NoEditHelp	Change the editor environment to the normal help type file
+		environment.
+
+:EditHelpToggle	Toggle the editor environment.
+
+==============================================================================
+VARIABLES						*edit-help-variables*
+
+vim:tw=78:ts=8:ft=help:norl:noet:fen:fdl=0:
