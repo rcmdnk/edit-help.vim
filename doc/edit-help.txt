@@ -1,4 +1,4 @@
-*edit-help.txt*	Plugin to support edditting help file of plugins
+*edit-help.txt*	Plugin to support editing help file of plugins
 
 Author : rcmdnk <rcmdnk@gmail.com>
 License: Apache 2.0
@@ -13,14 +13,14 @@ VARIABLES			|edit-help-variables|
 ==============================================================================
 INTRODUCTION					*edit-help-introduction*
 
-*edit-help* is a Vim plugin to support edditting help file of plugins.
+*edit-help* is a Vim plugin to support editing help file of plugins.
 
-Help type files are opend as readonly and nomodifiable.
+Help type files are opened as readonly and nomodifiable.
 In addition, some special characters are concealed.
 
 It is not useful when you are writing help for plugins.
 
-This plugin gives command to change the enviroment for files of help type
+This plugin gives command to change the environment for files of help type
 to be easy to edit.
 
 ==============================================================================
@@ -41,13 +41,13 @@ VARIABLES						*edit-help-variables*
 
 						*g:edit_help_textwidth*
 g:edit_help_textwidth
-		textwidth value when editting help type files.
+		textwidth value when editing help type files.
 
 		Default: 78
 
 						*g:edit_help_tabwidth*
 g:edit_help_tabwidth
-		Tab width when editting help type files.
+		Tab width when editing help type files.
 
 		Default: 8
 
